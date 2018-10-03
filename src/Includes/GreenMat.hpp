@@ -32,7 +32,7 @@ class GreenCluster0Mat
         zm_ = cd_t(0.0);
         fm_ = cd_t(1.0, 0.0);
         sm_ = cd_t(-mu_, 0.0);
-        tm_ = mu_ * mu_ + 4.0;
+        tm_ = cd_t(mu_ * mu_ + 4.0, 0.0);
 
         for (size_t n = 0; n < NN; n++)
         {

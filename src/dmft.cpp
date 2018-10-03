@@ -32,7 +32,7 @@ int main(int argc, char **argv)
     monteCarloMachine.RunMonteCarlo();
     Model_t model(jj);
     ClusterCubeCD_t greenImpurity;
-    assert(greenImpurity.load("greenUp.dat"));
+    assert(greenImpurity.load("greenUp.arma"));
 
     SelfCon::SelfConsistency selfcon(jj, greenImpurity, model.hybridizationMatUp());
     selfcon.DoSCGrid();

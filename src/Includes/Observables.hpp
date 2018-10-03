@@ -17,7 +17,6 @@ class Observables
 {
 
       public:
-        size_t N_BIN_TAU = 10000;
         Observables(const Model_t &model, const std::shared_ptr<ISDataCTINT> &datactint,
                     const size_t &totalNMeas) : model_(model),
                                                 datactint_(datactint),
@@ -31,20 +30,8 @@ class Observables
         {
                 greenMatsubaraUp_.zeros();
 
-                Maverage_.resize(NMat_);
+                Maverage_.resize(NMat_, 0.0);
                 const size_t Nc = 1;
-
-                M0Bins_.resize(Nc);
-                M1Bins_.resize(Nc);
-                M2Bins_.resize(Nc);
-                M3Bins_.resize(Nc);
-                for (size_t ii = 0; ii < M0Bins_.size(); ii++)
-                {
-                        M0Bins_.at(ii).resize(N_BIN_TAU, 0.0);
-                        M1Bins_.at(ii).resize(N_BIN_TAU, 0.0);
-                        M2Bins_.at(ii).resize(N_BIN_TAU, 0.0);
-                        M3Bins_.at(ii).resize(N_BIN_TAU, 0.0);
-                }
         }
 
         //Getters
@@ -77,10 +64,8 @@ class Observables
                                 {
                                         Tau_t tau = datactint_->vertices_.at(kk).tau() + epsilon - datactint_->vertices_.at(mm).tau();
 
-                                        const cd_t expkkmm = std::exp(-iwn * tau);
-                                        Maverage_.at(nn) += 0.5 * fact * expkkmm * Maveraged_(kk, mm);
-                                        //Add the transpose of the configurations:
-                                        Maverage_.at(nn) += 0.5 * fact * std::conj(expkkmm) * Maveraged_(mm, kk);
+                                        const cd_t expkkmm = std::exp(iwn * tau);
+                                        Maverage_.at(nn) += fact * expkkmm * Maveraged_(kk, mm);
                                 }
                         }
                 }
@@ -105,7 +90,7 @@ class Observables
                 //The greens
                 FinalizeGreens();
                 std::ofstream fup;
-                const std::string fnameGreenUp = "greenUp.dat";
+                std::string fnameGreenUp = "greenUp.dat";
                 fup.open(fnameGreenUp, std::ios::out);
 
                 for (size_t nn = 0; nn < greenMatsubaraUp_.n_rows; nn++)
@@ -120,6 +105,7 @@ class Observables
                 }
                 fup.close();
 
+                fnameGreenUp = "greenUp.arma";
                 greenMatsubaraUp_.save(fnameGreenUp, arma::raw_ascii);
         }
 
@@ -131,7 +117,7 @@ class Observables
                 for (size_t nn = 0; nn < NMat_; nn++)
                 {
                         const cd_t tmp = model_.greenCluster0MatUp().data()(nn, 0);
-                        greenMatsubaraUp_(nn, 0) = tmp - tmp * tmp * Maverage_.at(nn);
+                        greenMatsubaraUp_(nn, 0) = tmp - tmp * tmp * Maverage_.at(nn) / (model_.beta() * signMeas_);
                 }
         }
 
@@ -143,11 +129,6 @@ class Observables
         double signMeas_;
         double expOrder_;
         ClusterMatrixCD_t greenMatsubaraUp_;
-
-        std::vector<std::vector<double>> M0Bins_;
-        std::vector<std::vector<double>> M1Bins_;
-        std::vector<std::vector<double>> M2Bins_;
-        std::vector<std::vector<double>> M3Bins_;
 
         std::vector<cd_t> Maverage_;
         ClusterMatrix_t Maveraged_;
