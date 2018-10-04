@@ -1,14 +1,14 @@
 {
     "SEED": 53201,
-    "beta": 5.67,
-    "NMAT": 100,
+    "beta": 10.00,
+    "NMAT": 200,
     "NTAU": 20000,
     "UPDATESMEAS": 50,
-    "THERMALIZATION": 100,
+    "THERMALIZATION": 1000,
     "TOTALNMEAS": 10000,
     "CLEANUPDATE": 100,
-    "U": 2.0,
-    "mu": 1.00,
+    "U": 3.0,
+    "mu": 1.500,
     "delta": 0.01,
     "HybFile": "hyb1"
 }

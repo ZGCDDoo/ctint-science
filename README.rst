@@ -3,35 +3,46 @@
 ==========================================================================
 
 :Authors: Charles-David Hébert, Maxime Charlebois, Patrick Sémon 
-:Date: $Date: 2017-09-21 01:10:53 +0000 (Fri, 21 Sept 2017) $
-:Revision: $Revision: 1.01 $
-:Description: Description
 
-Graham
--------
-
-g++
-^^^^^^
-
-* module reset 
-* module load nixpkgs/16.09  gcc/5.4.0 armadillo boost-mpi
-* mkdir build && cd build && cmake -Dhome=OFF -Dgraham=ON .. && make
-
-icpc (mpic++)
-^^^^^^^^^^^^^^
-* module reset
-* module load intel/2017.5 armadillo boost-mpi
-* mkdir build && cd buil && cmake -Dhome=OFF -Dgraham=ON .. && make
-
-Mp2
-------
-
-g++ and icpc (mpic++)
-^^^^^^^^^^^^^^^^^^^^^^
-* module reset
-* module load cmake/3.6.1  gcc/6.1.0  intel64/17.4  boost64/1.65.1_intel17 openmpi/1.8.4_intel17  armadillo/8.300.0
-* mkdir build && cd buil && cmake -Dhome=OFF -Dmp2=ON .. && make
+Installation
+================================
 
 
+**Note :**
+If build problems,
+please remove the build directory if it exists, then retry :
+    
+    $ rm -rf build
+
+Dependencies
+--------------
+1. Armadillo
+2. boost (mpi, serialization, filesystem, system)
+
+
+Pre-Steps
+----------
+1. Make sure you have a "bin" directory in your home folder
+2. Append the bin folder to your path. Add the following line to your ~/.bashrc:  export PATH="$PATH:~/bin"
+3. $ source ~/.bashrc
+
+Linux (Ubuntu 16.04 and 18.04)
+--------------------------------
+This installation procedure should work for many recent Linux flavors. For the following
+we present the instructions specific for Ubuntu or derivatives.
+
+1. Install the Dependencies
+    $ sudo apt-get install libarmadillo-dev libboost-all-dev cmake liblapack-dev
+2. | $ mkdir build && cd build && cmake .. && make install
+
+
+
+Example
+================================
+1. Go to the examples/U3_b10 directory:
+   $ cd examples/U3_b10
+   $ bash run_dmft.sh
+
+2. The important output is the selfenergy, given at each dmft iteration, by self+{$ITER}.dat .
 
     
