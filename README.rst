@@ -26,6 +26,16 @@ Pre-Steps
 2. Append the bin folder to your path. Add the following line to your ~/.bashrc:  export PATH="$PATH:~/bin"
 3. $ source ~/.bashrc
 
+
+Mac (Tested on macOS 10.13.6)
+--------------------------------
+1. Install the Dependencies (with Homebrew : https://brew.sh/)
+    $ brew install armadillo
+    | $ brew install boost
+    | $ brew install boost-mpi
+2. | $ mkdir build && cd build && cmake .. && make install
+
+
 Linux (Ubuntu 16.04 and 18.04)
 --------------------------------
 This installation procedure should work for many recent Linux flavors. For the following
@@ -40,9 +50,14 @@ we present the instructions specific for Ubuntu or derivatives.
 Example
 ================================
 1. Go to the examples/U3_b10 directory:
-   $ cd examples/U3_b10
-   $ bash run_dmft.sh
+   | $ cd examples/U3_b10
+   | $ bash run_dmft.sh
 
 2. The important output is the selfenergy, given at each dmft iteration, by self+{$ITER}.dat .
 
-    
+
+Used third-party tools
+================================
+    * Json Libraray: https://github.com/nlohmann/json
+    * armadillo : http://arma.sourceforge.net/
+    * boost: https://www.boost.org/
