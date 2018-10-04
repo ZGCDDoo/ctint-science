@@ -29,11 +29,13 @@ Pre-Steps
 
 Mac (Tested on macOS 10.13.6)
 --------------------------------
+
 1. Install the Dependencies (with Homebrew : https://brew.sh/)
-    $ brew install armadillo
-    | $ brew install boost
-    | $ brew install boost-mpi
-2. | $ mkdir build && cd build && cmake .. && make install
+      * $ brew install armadillo
+      * $ brew install boost
+      * $ brew install boost-mpi
+
+2. $ mkdir build && cd build && cmake .. && make install
 
 
 Linux (Ubuntu 16.04 and 18.04)
