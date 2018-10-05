@@ -4,6 +4,14 @@
 
 :Authors: Charles-David Hébert, Maxime Charlebois, Patrick Sémon 
 
+
+
+Notes
+================================
+This program reproduces the DMFT results that can be found in the following article: https://arxiv.org/abs/1802.09456 .
+However, this program is not optimized for speed. The main reasons being ease of use and installation.
+
+
 Installation
 ================================
 
