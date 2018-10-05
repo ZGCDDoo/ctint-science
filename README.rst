@@ -65,8 +65,7 @@ Used third-party tools
     * armadillo : http://arma.sourceforge.net/
     * boost: https://www.boost.org/
     
-    
+   
  Contact and help
-================================
-To get help, please leave an issue or email:
-charles-david.hebert@usherbrooke.ca
+===================
+To get help, please leave an issue or contact me by email at charles-david.hebert\@usherbrooke.ca
