@@ -66,6 +66,6 @@ Used third-party tools
     * boost: https://www.boost.org/
     
    
- Contact and help
+Contact and help
 ===================
-To get help, please leave an issue or contact me by email at charles-david.hebert\@usherbrooke.ca
+To get help, please leave an issue or contact me by email at charles-david.hebert@usherbrooke.ca
