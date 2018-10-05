@@ -56,10 +56,17 @@ Example
    | $ bash run_dmft.sh
 
 2. The important output is the selfenergy, given at each dmft iteration, by self+{$ITER}.dat .
-
+   The columns are the matsubara frequencies, the real and imaginary parts of the self-energy.
+   The parameter files is given by params{$ITER}.json, which is in big part self-explainatory.
 
 Used third-party tools
 ================================
     * Json Libraray: https://github.com/nlohmann/json
     * armadillo : http://arma.sourceforge.net/
     * boost: https://www.boost.org/
+    
+    
+ Contact and help
+================================
+To get help, please leave an issue or email:
+charles-david.hebert@usherbrooke.ca
