@@ -80,7 +80,7 @@ We use json as the parameter file. Please keep the same structure and the same n
 * NMAT : The number of matsubara frequencies
 * NTAU : The discretization in imaginary time. Should be at least 1000
 * UPDATESMEAS : The number of updates bewteen each measure
-* Thermalization : The number of UPDATESMEAS for the thermalization, i.e , do UPDATESMEAS*THERMALIZATION updates before measuring 
+* THERMALIZATION : The number of UPDATESMEAS for the thermalization, i.e , do UPDATESMEAS*THERMALIZATION updates before measuring 
 * TOTALNMEAS : The number of measures
 * CLEANUPDATE : The number of UPDATESMEAS before a cleanupdate
 * delta : Value for the auxiliary Ising Spins
