@@ -67,6 +67,25 @@ Example
    The columns are the matsubara frequencies, the real and imaginary parts of the self-energy.
    The parameter files is given by params{$ITER}.json, which is in big part self-explainatory.
 
+
+Parameters
+===========
+
+We use json as the parameter file. Please keep the same structure and the same names (with case) as in the examples.
+
+* SEED: The seed for the random number generator
+* beta: Inverse temperature
+* mu : Chemical potentiel
+* U : Hubbard Interaction
+* NMAT : The number of matsubara frequencies
+* NTAU : The discretization in imaginary time. Should be at least 1000
+* UPDATESMEAS : The number of updates bewteen each measure
+* Thermalization : The number of UPDATESMEAS for the thermalization, i.e , do UPDATESMEAS*THERMALIZATION updates before measuring 
+* TOTALNMEAS : The number of measures
+* CLEANUPDATE : The number of UPDATESMEAS before a cleanupdate
+* delta : Value for the auxiliary Ising Spins
+* HybFile: the name of the hybridization file for the current iteration
+
 Used third-party tools
 ================================
     * Json Libraray: https://github.com/nlohmann/json
