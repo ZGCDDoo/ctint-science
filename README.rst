@@ -25,7 +25,7 @@ please remove the build directory if it exists, then retry :
 Dependencies
 --------------
 1. Armadillo
-2. boost (mpi, serialization, filesystem, system)
+2. boost (serialization, filesystem, system)
 
 
 Pre-Steps
@@ -41,7 +41,6 @@ Mac (Tested on macOS 10.13.6)
 1. Install the Dependencies (with Homebrew : https://brew.sh/)
       * $ brew install armadillo
       * $ brew install boost
-      * $ brew install boost-mpi
 
 2. $ mkdir build && cd build && cmake .. && make install
 

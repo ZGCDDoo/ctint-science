@@ -1,5 +1,4 @@
 #Inspired by https://github.com/dmonopoly/gtest-cmake-example
-#           https://github.com/misaka-10032/boost-mpi-examples
 
 cmake_minimum_required(VERSION 2.8)
 
@@ -14,7 +13,7 @@ set(CMAKE_CXX_FLAGS " -Wall -Wextra -std=c++14 -O3 -Ofast -fomit-frame-pointer")
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/src/Includes)
 
 find_package(LAPACK REQUIRED)
-find_package(Boost REQUIRED mpi serialization filesystem system)
+find_package(Boost REQUIRED serialization filesystem system)
 
 
 set(LIBRARIES_EXEC ${LAPACK_LIBRARIES} ${Boost_LIBRARIES} armadillo)

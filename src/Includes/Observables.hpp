@@ -31,7 +31,6 @@ class Observables
                 greenMatsubaraUp_.zeros();
 
                 Maverage_.resize(NMat_, 0.0);
-                const size_t Nc = 1;
         }
 
         //Getters
