@@ -4,6 +4,8 @@
 
 :Authors: Charles-David Hébert, Maxime Charlebois, Patrick Sémon 
 
+.. image:: https://travis-ci.com/ZGCDDoo/ctint-science.svg?branch=master
+    :target: https://travis-ci.com/ZGCDDoo/ctint-science
 
 
 Notes
