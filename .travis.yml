@@ -1,0 +1,17 @@
+language: cpp
+sudo: required
+dist: xenial
+compiler:
+  - gcc
+os:
+  - linux
+before_install:
+  - sudo apt-get install -y liblapack-dev clang build-essential libarmadillo-dev libboost-all-dev cmake
+script:
+  - cd $TRAVIS_BUILD_DIR && mkdir build && cd build && cmake .. && make
+after_success:
+branches:
+  only:
+    - master
+notifications:
+  email: true
