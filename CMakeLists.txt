@@ -26,7 +26,7 @@ set(LIBRARIES_TEST ${LIBRARIES_EXEC} gtest gtest_main)
 
 ################################
 set(EXECECUTABLES 
-    dmft
+    ctint-science
 )
 
 foreach(executable ${EXECECUTABLES})
