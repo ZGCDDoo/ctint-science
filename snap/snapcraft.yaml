@@ -1,0 +1,26 @@
+name: ctint-science
+version: "1.0.0"
+summary: ctint-science
+description: >
+  ctint-science is a continuos time quantum monte carlo solver
+  in the interaction expansion.
+
+confinement: devmode
+
+parts:
+  ctint-science:
+    plugin: cmake
+    source: https://github.com/ZGCDDoo/ctint-science
+    source-branch: master
+    build-packages:
+      - build-essential
+      - make
+      - cmake
+      - liblapack-dev
+      - libboost-all-dev
+      - libarmadillo-dev
+
+apps:
+  ctint-science:
+    command: ctint-science
+  
