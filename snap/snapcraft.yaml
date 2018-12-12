@@ -8,7 +8,8 @@ confinement: devmode
 parts:
   ctint-science:
     plugin: cmake
-    source: https://github.com/ZGCDDoo/ctint-science
+    source: https://github.com/ZGCDDoo/ctint-science.git
+    source-type: git
     source-branch: master
     build-packages:
       - build-essential
