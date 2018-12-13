@@ -3,7 +3,7 @@ version: "1.0.0"
 summary: ctint-science
 description: ctint-science is a continuos time quantum monte carlo solver
 
-confinement: devmode
+confinement: strict
 
 apps:
   ctint-science:
