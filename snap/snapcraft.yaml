@@ -33,7 +33,7 @@ parts:
       - libboost_system.so.1.58.0
       - libgfortran.so.3
       - libquadmath.so.0
-      - libsuperlu.so.4
+      - libsuperlu.so
 
 
   
