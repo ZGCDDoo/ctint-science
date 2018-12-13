@@ -14,7 +14,7 @@ set(CMAKE_CXX_FLAGS " -Wall -Wextra -std=c++14 -O3 -Ofast -fomit-frame-pointer")
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/src/Includes)
 
 find_package(LAPACK REQUIRED)
-find_package(Boost REQUIRED serialization filesystem system)
+find_package(Boost REQUIRED filesystem system)
 
 
 set(LIBRARIES_EXEC ${LAPACK_LIBRARIES} ${Boost_LIBRARIES} armadillo)
