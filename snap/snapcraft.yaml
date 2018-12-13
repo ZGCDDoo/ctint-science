@@ -5,9 +5,15 @@ description: ctint-science is a continuos time quantum monte carlo solver
 
 confinement: devmode
 
+apps:
+  ctint-science:
+    command: ctint-science
+    
 parts:
   ctint-science:
     plugin: cmake
+    configflags:
+      - -DSNAP=ON
     source: https://github.com/ZGCDDoo/ctint-science.git
     source-type: git
     source-branch: master
@@ -19,7 +25,5 @@ parts:
       - libboost-all-dev
       - libarmadillo-dev
 
-apps:
-  ctint-science:
-    command: ctint-science
+
   

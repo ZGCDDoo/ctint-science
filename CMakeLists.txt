@@ -3,6 +3,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 SET(CMAKE_CXX_COMPILER g++)
+option(SNAP OFF)
 
 
 set(PROJECT_NAME CT-INT)
@@ -38,7 +39,11 @@ endforeach()
 
 foreach(executable ${EXECECUTABLES})
     target_link_libraries(${executable}  ${LIBRARIES_EXEC})
-    install(TARGETS ${executable} DESTINATION $ENV{HOME}/bin)
+    if(SNAP)
+        install(TARGETS ${executable} DESTINATION /bin)
+    else()
+        install(TARGETS ${executable} DESTINATION $ENV{HOME}/bin)
+    endif()
 endforeach()
 
 
