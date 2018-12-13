@@ -22,7 +22,8 @@ parts:
       - make
       - cmake
       - liblapack-dev
-      - libboost-all-dev
+      - libboost-filesystem-dev
+      - libboost-system-dev
       - libarmadillo-dev
     stage-packages:
       - liblapack.so.3
