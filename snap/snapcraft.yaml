@@ -4,6 +4,9 @@ summary: ctint-science
 description: ctint-science is a continuos time quantum monte carlo solver
 confinement: strict
 grade: stable
+architectures:
+  - build-on: [amd64]
+    run-on: [amd64]
 
 apps:
   ctint-science:

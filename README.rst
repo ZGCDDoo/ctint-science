@@ -7,6 +7,9 @@
 .. image:: https://travis-ci.com/ZGCDDoo/ctint-science.svg?branch=master
     :target: https://travis-ci.com/ZGCDDoo/ctint-science
 
+.. image:: https://build.snapcraft.io/badge/ZGCDDoo/ctint-science.svg
+    :target: https://build.snapcraft.io/user/ZGCDDoo/ctint-science
+
 
 Notes
 ================================
