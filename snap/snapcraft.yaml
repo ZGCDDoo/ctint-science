@@ -29,16 +29,16 @@ parts:
       - libboost-system-dev
       - libarmadillo-dev
 
-    stage-packages:
-      - liblapack3
-      - libblas3
-      - libarpack2
-      - libarmadillo6
-      - libboost-filesystem1.58.0
-      - libboost-system1.58.0
-      - libgfortran3
-      - libquadmath0
-      - libsuperlu4
+    # stage-packages:
+    #   - liblapack3
+    #   - libblas3
+    #   - libarpack2
+    #   - libarmadillo6
+    #   - libboost-filesystem1.58.0
+    #   - libboost-system1.58.0
+    #   - libgfortran3
+    #   - libquadmath0
+    #   - libsuperlu4
 
 
   
