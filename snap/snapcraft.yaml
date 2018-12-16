@@ -2,7 +2,7 @@ name: ctint-science
 version: "1.0.0"
 summary: ctint-science
 description: ctint-science is a continuos time quantum monte carlo solver
-confinement: devmode
+confinement: strict
 grade: stable
 architectures:
   - build-on: [amd64]
@@ -11,6 +11,11 @@ architectures:
 apps:
   ctint-science:
     command: ctint-science
+    environment:
+      LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/lib:$SNAP/usr/lib/x86_64-linux-gnu:$SNAP/usr/lib/lapack:$SNAP/usr/lib/libblas:$SNAP_LIBRARY_PATH
+
+    plugs:
+      - home
 
 parts:
   ctint-science:
@@ -29,16 +34,10 @@ parts:
       - libboost-system-dev
       - libarmadillo-dev
 
-    # stage-packages:
-    #   - liblapack3
-    #   - libblas3
-    #   - libarpack2
-    #   - libarmadillo6
-    #   - libboost-filesystem1.58.0
-    #   - libboost-system1.58.0
-    #   - libgfortran3
-    #   - libquadmath0
-    #   - libsuperlu4
-
+    stage-packages:
+      - liblapack-dev
+      - libboost-filesystem-dev
+      - libboost-system-dev
+      - libarmadillo-dev
 
   
