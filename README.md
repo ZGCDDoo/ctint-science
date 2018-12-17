@@ -103,4 +103,4 @@ We use json as the parameter file. Please keep the same structure and the same n
 To get help, please leave an issue or contact me by email at charles-david.hebert@usherbrooke.ca
 
 ## Authors:
-Charles-David Hébert, Maxime Charlebois, Patrick Sémon 
+Charles-David Hébert, Maxime Charlebois, Patrick Sémon .
