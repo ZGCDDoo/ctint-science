@@ -10,7 +10,10 @@
 
 ## Notes
 
-This program reproduces the DMFT results that can be found in the following article: https://arxiv.org/abs/1802.09456 .
+This program reproduces the DMFT results that can be found in the following science article: http://science.sciencemag.org/content/early/2018/12/06/science.aat4134.abstract
+
+It is also available on the *arxiv*:https://arxiv.org/abs/1802.09456 .
+
 However, this program is not optimized for speed. The main reasons being ease of use and installation. Please contact the developper to discuss obtaining the optimized version.
 
 
