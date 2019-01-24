@@ -14,7 +14,9 @@ This program reproduces the DMFT results that can be found in the following scie
 
 It is also available on the *arxiv*:https://arxiv.org/abs/1802.09456 .
 
-However, this program is not optimized for speed. The main reasons being ease of use and installation. Please contact the developper to discuss obtaining the optimized version.
+### Obtaining the full version
+This program is a heavily toned down version.
+Indeed, this program is not optimized for speed, nor is generic or parallel. The main reasons being ease of use, installation and keeping competitive advantages. Please contact the developper to discuss obtaining the fully optimized, generic and parallel version.
 
 
 ## Installation
