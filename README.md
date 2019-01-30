@@ -10,8 +10,13 @@
 
 ## Notes
 
-This program reproduces the DMFT results that can be found in the following article: https://arxiv.org/abs/1802.09456 .
-However, this program is not optimized for speed. The main reasons being ease of use and installation. Please contact the developper to discuss obtaining the optimized version.
+This program reproduces the DMFT results that can be found in the following science article: http://science.sciencemag.org/content/early/2018/12/06/science.aat4134.abstract
+
+It is also available on the *arxiv*:https://arxiv.org/abs/1802.09456 .
+
+### Obtaining the full version
+This program is a heavily toned down version.
+Indeed, this program is not optimized for speed, nor is generic or parallel. The main reasons being ease of use, installation and keeping competitive advantages. Please contact the developper to discuss obtaining the fully optimized, generic and parallel version.
 
 
 ## Installation
@@ -103,4 +108,8 @@ We use json as the parameter file. Please keep the same structure and the same n
 To get help, please leave an issue or contact me by email at charles-david.hebert@usherbrooke.ca
 
 ## Authors:
-Charles-David Hébert, Maxime Charlebois, Patrick Sémon .
+Charles-David Hébert.
+
+## Acknowledgments
+
+Maxime charlebois and Patrick Sémon have inspired some portions of the code.
