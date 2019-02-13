@@ -1,7 +1,7 @@
 
 
-#include "../Includes/Utilities.hpp"
-#include "../Includes/Model.hpp"
+#include "Utilities.hpp"
+#include "Model.hpp"
 
 namespace SelfCon
 {

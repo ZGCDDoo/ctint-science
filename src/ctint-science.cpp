@@ -1,10 +1,10 @@
 
-#include "Includes/MonteCarloNew.hpp"
-#include "Includes/SelfConsistency.hpp"
-#include "Includes/MarkovChain.hpp"
-#include "Includes/FS.hpp"
-#include "Includes/GreenMat.hpp"
-#include "Includes/GreenTau.hpp"
+#include "ctint-science/MonteCarloNew.hpp"
+#include "ctint-science/SelfConsistency.hpp"
+#include "ctint-science/MarkovChain.hpp"
+#include "ctint-science/FS.hpp"
+#include "ctint-science/GreenMat.hpp"
+#include "ctint-science/GreenTau.hpp"
 
 int main(int argc, char **argv)
 {
